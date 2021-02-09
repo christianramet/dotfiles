@@ -1,21 +1,16 @@
 umask 0027
 HISTFILESIZE=10000
 
-# Source global definitions
+source ~/.profile
+
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+	source /etc/bashrc
 fi
 
 if [ -e $HOME/.bash_aliases ]; then
-    . $HOME/.bash_aliases
+    source $HOME/.bash_aliases
 fi
 
-# Exports
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-export EDITOR="emacsclient -a ''"
-export GOPATH=$HOME/go
-
-# Misc
 setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
 
 # Vterm PS for directory tracking (libvterm)
