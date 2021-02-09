@@ -13,6 +13,7 @@ fi
 # Exports
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export EDITOR="emacsclient -a ''"
+export GOPATH=$HOME/go
 
 # Misc
 setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
