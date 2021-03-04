@@ -13,7 +13,8 @@ fi
 
 setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
 
-# Vterm PS for directory tracking (libvterm)
+# Vterm config
+# https://github.com/akermu/emacs-libvterm
 vterm_printf(){
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
         # Tell tmux to pass the escape sequences through
