@@ -2,7 +2,7 @@
 
 alias dd-watch="watch -n5 'sudo kill -USR1 $(pgrep ^dd)'"
 alias digs="dig $* +short"
-alias ec="emacsclient -nw -a '' $1"
+alias ec="emacsclient -a '' $1"
 alias freebox-tv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u"
 alias magit="emacsclient -n -e \(magit-status\)"
 alias reverse-tunnel-setup="ssh -R 10022:localhost:22 cr-bastion"
