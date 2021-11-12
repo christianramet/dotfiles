@@ -1,0 +1,12 @@
+# Always extract audio
+--extract-audio
+#--audio-format mp3
+
+# Embed thumbnail in the audio as cover art
+--embed-thumbnail
+
+# Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames
+--restrict-filenames
+
+# Save to the inbox with just the title and the format extension as filename
+--output '~/nextcloud/inbox/music/%(title)s.%(ext)s'
