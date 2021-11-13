@@ -1,6 +1,8 @@
 # Always extract audio
 --extract-audio
-#--audio-format mp3
+
+# Force format to mp3
+--audio-format mp3
 
 # Embed thumbnail in the audio as cover art
 --embed-thumbnail
