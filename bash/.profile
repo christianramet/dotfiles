@@ -8,3 +8,5 @@ export PATH=$PATH:$GOPATH/bin
 
 export NCPATH=$HOME/nextcloud
 export INBOX=$NCPATH/inbox
+
+export PATH=~/.npm-global/bin:$PATH
