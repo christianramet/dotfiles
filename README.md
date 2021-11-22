@@ -1,4 +1,4 @@
-# Dotfiles management with stown
+# Dotfiles management with GNU Stow
 
 This repositires is for managing my various configuration files, using
 [Gnu Stow](https://www.gnu.org/software/stow/), a symlink farm manager.
