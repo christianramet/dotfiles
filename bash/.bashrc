@@ -11,7 +11,9 @@ if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+if which setxkbmap &> /dev/null; then
+    setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+fi
 
 # Vterm config
 # https://github.com/akermu/emacs-libvterm
@@ -32,8 +34,26 @@ vterm_prompt_end(){
 }
 PS1=$PS1'\[$(vterm_prompt_end)\]'
 
+# Define KUBECONFIG file
+# https://www.mankier.com/1/kubectl-config
 function kubectl-env() {
   CFG=${1:-~/.kube/config}
   echo $CFG
   export KUBECONFIG=$CFG
 }
+
+# Use Git’s colored diff when available
+if type git &>/dev/null ; then
+  function diff() {
+    git diff --no-index --color-words "$@";
+  }
+fi
+
+# Simple http-server, requires npm with http-server
+if which http-server &> /dev/null; then
+    function server() {
+        local port="${1:-8000}";
+        sleep 1 && open "http://localhost:${port}/" &
+        http-server -p $port
+    }
+fi
