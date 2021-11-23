@@ -11,6 +11,7 @@ fi
 
 cd $DOTFILES_PATH
 
+# source: https://zihao.me/post/managing-dotfiles-with-gnu-stow/
 for PKG in ${PACKAGES[@]}; do
     CONFLICTS=$(stow -d $DOTFILES_PATH --no --verbose $PKG 2>&1 | awk '/\* existing target is/ {print $NF}')
     for FILENAME in ${CONFLICTS[@]}; do
