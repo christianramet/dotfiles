@@ -13,3 +13,5 @@ alias reverse-tunnel-use="ssh -J cr-bastion localhost -p 10022"
 alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3 --embed-thumbnail --restrict-filenames --output '$INBOX/%(title)s.%(ext)s'"
 alias loc="git ls-files | xargs wc -l | sort"
 alias provision="curl -s https://raw.githubusercontent.com/christianramet/fedora-provisioning/master/bootstrap.sh | bash -s $*"
+alias rclone-up='rclone copy $DIGIDRIVE digidrive:main -v'
+alias rclone-down='rclone sync -i digidrive:main $DIGIDRIVE -v'
