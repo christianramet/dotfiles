@@ -34,12 +34,18 @@ vterm_prompt_end(){
 }
 PS1=$PS1'\[$(vterm_prompt_end)\]'
 
-# Define KUBECONFIG file
-# https://www.mankier.com/1/kubectl-config
-function kubectl-env() {
+# Define kubectl configuration file
+function cr-kubectl-env() {
   CFG=${1:-~/.kube/config}
   echo $CFG
   export KUBECONFIG=$CFG
+}
+
+# Define Docker configuration file
+function cr-docker-env() {
+  CFG=${1:-~/.docker/config.json}
+  echo $CFG
+  export REGISTRY_AUTH_FILE=$CFG
 }
 
 # Use Git’s colored diff when available
