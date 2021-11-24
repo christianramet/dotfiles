@@ -19,8 +19,8 @@ alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3 --embed-thumbna
 alias loc="git ls-files | xargs wc -l | sort"
 alias provision="curl -s https://raw.githubusercontent.com/christianramet/fedora-provisioning/master/bootstrap.sh | bash -s $*"
 
-alias rclone-up='rclone copy -i $DIGIDRIVE digidrive:main -v'
-alias rclone-down='rclone copy -i digidrive:main $DIGIDRIVE -v'
+alias rclone-up='rclone sync -i --create-empty-src-dirs $DIGIDRIVE digidrive:main -v'
+alias rclone-down='rclone sync -i --create-empty-src-dirs digidrive:main $DIGIDRIVE -v'
 
 alias ip4="curl -4 https://icanhazip.com/"
 alias ip6="curl -6 https://icanhazip.com/"
