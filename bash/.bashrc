@@ -59,7 +59,7 @@ fi
 if which http-server &> /dev/null; then
     function server() {
         local port="${1:-8000}";
-        sleep 1 && open "http://localhost:${port}/" &
+        sleep 1 && xdg-open "http://localhost:${port}/" &
         http-server -p $port
     }
 fi
