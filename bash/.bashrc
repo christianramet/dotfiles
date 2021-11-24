@@ -48,13 +48,6 @@ function cr-docker-env() {
   export REGISTRY_AUTH_FILE=$CFG
 }
 
-# Use Git’s colored diff when available
-if type git &>/dev/null ; then
-  function diff() {
-    git diff --no-index --color-words "$@";
-  }
-fi
-
 # Simple http-server, requires npm with http-server
 if which http-server &> /dev/null; then
     function server() {
