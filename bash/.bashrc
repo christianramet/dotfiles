@@ -48,6 +48,13 @@ function cr-docker-env() {
   export REGISTRY_AUTH_FILE=$CFG
 }
 
+# Define Azure configuration directory
+function cr-azure-env() {
+  CFG=${1:-~/.azure}
+  echo $CFG
+  export AZURE_CONFIG_DIR=$CFG
+}
+
 # Simple http-server, requires npm with http-server
 if which http-server &> /dev/null; then
     function server() {
