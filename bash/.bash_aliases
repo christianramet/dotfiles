@@ -30,3 +30,11 @@ if [[ -e /sbin/ifconfig ]]; then
 else
   alias iplocal="ip address | grep 'inet ' | awk '{print $2}'"
 fi
+
+if which podman &> /dev/null; then
+    alias docker="podman"
+fi
+
+if which podman-compose &> /dev/null; then
+    alias docker-compose="podman-compose"
+fi
