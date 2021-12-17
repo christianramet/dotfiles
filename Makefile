@@ -1,5 +1,13 @@
-items = $(shell ls -d */ | cut -f1 -d'/')
 verbose = 2
+all_items = $(shell ls -d */ | cut -f1 -d'/')
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	items =	bash recoll ssh tmux
+endif
+ifeq ($(UNAME_S),Darwin)
+	items = ssh tmux
+endif
 
 all: backup install
 
