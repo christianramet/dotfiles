@@ -6,7 +6,7 @@ ifeq ($(UNAME_S),Linux)
 	items =	bash recoll ssh tmux
 endif
 ifeq ($(UNAME_S),Darwin)
-	items = ssh tmux
+	items = ssh tmux zsh
 endif
 
 all: backup install
