@@ -1,3 +1,3 @@
-if [[ -f ~/.profile ]]; then
-    source ~/.profile
-fi
+[ -e ~/.profile ] && source ~/.profile
+[ -e ~/.aliases ] && source ~/.aliases
+[ -e ~/.functions ] && source ~/.functions

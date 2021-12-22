@@ -1,7 +1,3 @@
-# ~/.bash_aliases
-
-alias reload="exec $(which bash) -l"
-
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias grep='grep --color=auto'

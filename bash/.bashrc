@@ -1,15 +1,6 @@
-HISTSIZE=1000
-HISTFILESIZE=50000
-
-source ~/.profile
-
-if [ -f /etc/bashrc ]; then
-	source /etc/bashrc
-fi
-
-if [ -e $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
+[ -e ~/.profile ] && source ~/.profile
+[ -e ~/.aliases ] && source ~/.aliases
+[ -e ~/.functions ] && source ~/.functions
 
 if which setxkbmap &> /dev/null; then
     setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
@@ -33,33 +24,3 @@ vterm_prompt_end(){
     vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
 }
 PS1=$PS1'\[$(vterm_prompt_end)\]'
-
-# Define kubectl configuration file
-function cr-kubectl-env() {
-  CFG=${1:-~/.kube/config}
-  echo $CFG
-  export KUBECONFIG=$CFG
-}
-
-# Define Docker configuration file
-function cr-docker-env() {
-  CFG=${1:-~/.docker/config.json}
-  echo $CFG
-  export REGISTRY_AUTH_FILE=$CFG
-}
-
-# Define Azure configuration directory
-function cr-azure-env() {
-  CFG=${1:-~/.azure}
-  echo $CFG
-  export AZURE_CONFIG_DIR=$CFG
-}
-
-# Simple http-server, requires npm with http-server
-if which http-server &> /dev/null; then
-    function server() {
-        local port="${1:-8000}";
-        sleep 1 && xdg-open "http://localhost:${port}/" &
-        http-server -p $port
-    }
-fi
