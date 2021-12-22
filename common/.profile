@@ -2,8 +2,6 @@ umask 0027
 
 HISTSIZE=10000
 HISTFILESIZE=50000
-setopt INC_APPEND_HISTORY
-setopt EXTENDED_HISTORY
 
 export LANG="en_US.UTF-8"
 export PATH=$PATH:/usr/local/sbin:$HOME/.local/bin:$HOME/bin
