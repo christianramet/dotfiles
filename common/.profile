@@ -4,7 +4,6 @@ export LANG="en_US.UTF-8"
 
 export HISTSIZE=10000
 export HISTFILESIZE=50000
-export HISTCONTROL=ignoredups
 
 export PATH=$PATH:/usr/local/sbin:$HOME/.local/bin:$HOME/bin
 export NCPATH=$HOME/Nextcloud
