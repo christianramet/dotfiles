@@ -1,20 +1,22 @@
 umask 0027
 
-HISTSIZE=10000
-HISTFILESIZE=50000
-
 export LANG="en_US.UTF-8"
+
+export HISTSIZE=10000
+export HISTFILESIZE=50000
+export HISTCONTROL=ignoredups
+
 export PATH=$PATH:/usr/local/sbin:$HOME/.local/bin:$HOME/bin
 export NCPATH=$HOME/Nextcloud
 export INBOX=$NCPATH/inbox
 export DIGIDRIVE=$HOME/digidrive
 
-if [[ $(uname) == "Darwin" ]]; then
-    export DICPATH="$HOME/Library/Spelling"
-fi
-
 if which emacsclient &> /dev/null; then
     export EDITOR="emacsclient -a ''"
+fi
+
+if [[ $(uname) == "Darwin" ]]; then
+    export DICPATH="$HOME/Library/Spelling"
 fi
 
 if which go &> /dev/null; then
