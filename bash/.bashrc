@@ -3,10 +3,6 @@
 [ -e ~/.aliases ] && source ~/.aliases
 [ -e ~/.functions ] && source ~/.functions
 
-if which setxkbmap &> /dev/null; then
-    setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
-fi
-
 # Vterm config
 # https://github.com/akermu/emacs-libvterm
 vterm_printf(){
