@@ -1,6 +1,5 @@
 [ -e ~/.aliases ] && source ~/.aliases
 [ -e ~/.functions ] && source ~/.functions
-[ -e /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export HISTSIZE=10000
 export HISTFILESIZE=50000
