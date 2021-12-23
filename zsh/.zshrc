@@ -1,12 +1,13 @@
 export LANG="en_US.UTF-8"
 
-[ -e /etc/bashrc ] && source /etc/bashrc
-[ -e ~/.profile ] && source ~/.profile
 [ -e ~/.aliases ] && source ~/.aliases
 [ -e ~/.functions ] && source ~/.functions
+[ -e /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export HISTSIZE=10000
 export HISTFILESIZE=50000
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
 
 export NCPATH=$HOME/Nextcloud
 export INBOX=$NCPATH/inbox
@@ -16,17 +17,9 @@ if which emacsclient &> /dev/null; then
     export EDITOR="emacsclient -a ''"
 fi
 
-if which go &> /dev/null; then
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
-fi
-
-if which npm &> /dev/null; then
-    export PATH=$PATH:~/.npm-global/bin
-fi
-
 ### Vterm integration (requires vterm_printf function)
-vterm_prompt_end(){
-    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+vterm_prompt_end() {
+    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
 }
-PS1=$PS1'\[$(vterm_prompt_end)\]'
+setopt PROMPT_SUBST
+PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
