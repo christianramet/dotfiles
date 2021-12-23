@@ -5,7 +5,7 @@ export LANG="en_US.UTF-8"
 export HISTSIZE=10000
 export HISTFILESIZE=50000
 
-export PATH=$PATH:/usr/local/sbin:$HOME/.local/bin:$HOME/bin
+export PATH=$PATH:/usr/local/sbin:$HOME/bin:$HOME/.local/bin
 export NCPATH=$HOME/Nextcloud
 export INBOX=$NCPATH/inbox
 export DIGIDRIVE=$HOME/digidrive

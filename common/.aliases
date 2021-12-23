@@ -20,9 +20,9 @@ alias ip4="curl -4 https://icanhazip.com/"
 alias ip6="curl -6 https://icanhazip.com/"
 
 if [[ -e /sbin/ifconfig ]]; then
-  alias iplocal="ifconfig | grep 'inet ' | awk '{print $2}'"
+    alias iplocal="ifconfig | grep 'inet ' | awk '{print $2}'"
 else
-  alias iplocal="ip address | grep 'inet ' | awk '{print $2}'"
+    alias iplocal="ip address | grep 'inet ' | awk '{print $2}'"
 fi
 
 if which podman &> /dev/null; then
