@@ -4,6 +4,7 @@ export LANG="en_US.UTF-8"
 [ -e ~/.profile ] && source ~/.profile
 [ -e ~/.aliases ] && source ~/.aliases
 [ -e ~/.functions ] && source ~/.functions
+[ -d ~/bin ] && export PATH=$PATH:~/bin
 
 export HISTSIZE=10000
 export HISTFILESIZE=50000
