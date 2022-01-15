@@ -3,7 +3,8 @@
 GIT_MAIN_DIR=~/git
 declare -A REPOS=([emacs-abo-abo]="git@github.com:abo-abo/oremacs.git"
                   [emacs-purcell]="git@github.com:purcell/emacs.d.git"
-                  [emacs-jwiegley]="git@github.com:jwiegley/dot-emacs.git")
+                  [emacs-jwiegley]="git@github.com:jwiegley/dot-emacs.git"
+                  [emacs-prot]="git@github.com:protesilaos/dotfiles.git")
 
 for i in "${!REPOS[@]}"; do
     echo "Processing $i..."
