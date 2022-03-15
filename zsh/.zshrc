@@ -6,9 +6,9 @@ export HISTFILESIZE=50000
 setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 
-if which emacsclient &> /dev/null; then
-    export EDITOR="emacsclient -a ''"
-fi
+# if which emacsclient &> /dev/null; then
+#     export EDITOR="emacsclient -a ''"
+# fi
 
 ### Vterm integration (requires vterm_printf function)
 vterm_prompt_end() {

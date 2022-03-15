@@ -13,9 +13,9 @@ export NCPATH=$HOME/Nextcloud
 export INBOX=$NCPATH/inbox
 export DIGIDRIVE=$HOME/digidrive
 
-if which emacsclient &> /dev/null; then
-    export EDITOR="emacsclient -a ''"
-fi
+# if which emacsclient &> /dev/null; then
+#     export EDITOR="emacsclient -a ''"
+# fi
 
 if which go &> /dev/null; then
     export GOPATH=$HOME/go
