@@ -4,7 +4,7 @@ export LANG="en_US.UTF-8"
 [ -e ~/.profile ] && source ~/.profile
 [ -e ~/.aliases ] && source ~/.aliases
 [ -e ~/.functions ] && source ~/.functions
-[ -d ~/bin ] && export PATH=$PATH:~/bin
+# [ -d ~/bin ] && export PATH=$PATH:~/bin
 
 export HISTSIZE=10000
 export HISTFILESIZE=50000
@@ -17,14 +17,14 @@ export DIGIDRIVE=$HOME/digidrive
 #     export EDITOR="emacsclient -a ''"
 # fi
 
-if which go &> /dev/null; then
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
-fi
+# if which go &> /dev/null; then
+#     export GOPATH=$HOME/go
+#     export PATH=$PATH:$GOPATH/bin/pouet
+# fi
 
-if which npm &> /dev/null; then
-    export PATH=$PATH:~/.npm-global/bin
-fi
+# if which npm &> /dev/null; then
+#     export PATH=$PATH:~/.npm-global/bin
+# fi
 
 ### Vterm integration (requires vterm_printf function)
 vterm_prompt_end(){
