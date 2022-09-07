@@ -25,9 +25,3 @@ export DIGIDRIVE=$HOME/digidrive
 # if which npm &> /dev/null; then
 #     export PATH=$PATH:~/.npm-global/bin
 # fi
-
-### Vterm integration (requires vterm_printf function)
-vterm_prompt_end(){
-    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
-}
-PS1=$PS1'\[$(vterm_prompt_end)\]'

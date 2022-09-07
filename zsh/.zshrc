@@ -9,10 +9,3 @@ setopt EXTENDED_HISTORY
 # if which emacsclient &> /dev/null; then
 #     export EDITOR="emacsclient -a ''"
 # fi
-
-### Vterm integration (requires vterm_printf function)
-vterm_prompt_end() {
-    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
-}
-setopt PROMPT_SUBST
-PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
