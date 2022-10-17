@@ -13,5 +13,5 @@ fi
 
 if which go &> /dev/null; then
     export GOPATH=$HOME/go
-    export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+    export PATH=$PATH:$GOPATH/bin
 fi
