@@ -12,6 +12,7 @@ export INBOX=$NCPATH/inbox
 export DIGIDRIVE=$HOME/digidrive
 
 [ -d ~/bin ] && export PATH=$PATH:~/bin
+[ -d ~/.local/bin ] && export PATH=$PATH:~/.local/bin
 
 # if which npm &> /dev/null; then
 #     export PATH=$PATH:~/.npm-global/bin
