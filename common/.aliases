@@ -8,13 +8,13 @@ alias ec="emacsclient -a '' $1"
 alias magit="emacsclient -n -e \(magit-status\)"
 alias loc="git ls-files | xargs wc -l | sort"
 alias freebox-tv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u"
-alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3 --embed-thumbnail --restrict-filenames --output '$INBOX/%(title)s.%(ext)s'"
+alias youtube-mp3="yt-dlp --extract-audio --audio-format mp3 --embed-thumbnail --restrict-filenames --output '$INBOX/%(title)s.%(ext)s'"
 
 alias reverse-tunnel-setup="ssh -R 10022:localhost:22 cr-bastion"
 alias reverse-tunnel-use="ssh -J cr-bastion localhost -p 10022"
 
-alias rclone-up='rclone sync -i --create-empty-src-dirs $DIGIDRIVE digidrive:main -v'
-alias rclone-down='rclone sync -i --create-empty-src-dirs digidrive:main $DIGIDRIVE -v'
+alias rclone-up='rclone sync -i --create-empty-src-dirs $DIGIDRIVE digidrive:/ -v'
+alias rclone-down='rclone sync -i --create-empty-src-dirs digidrive:/ $DIGIDRIVE -v'
 
 alias ip4="curl -4 https://icanhazip.com/"
 alias ip6="curl -6 https://icanhazip.com/"
