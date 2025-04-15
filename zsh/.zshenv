@@ -2,6 +2,7 @@ export LANG="en_US.UTF-8"
 
 [ -e /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 [ -d ~/bin ] && export PATH=$PATH:~/bin
+[ -d ~/local/bin ] && export PATH=$PATH:~/.local/bin
 
 export NCPATH=$HOME/Nextcloud
 export INBOX=$NCPATH/inbox
