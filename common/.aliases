@@ -32,3 +32,8 @@ fi
 if which podman-compose &> /dev/null; then
     alias docker-compose="podman-compose"
 fi
+
+alias v='nvim'
+alias vc='NVIM_APPNAME=nvim-christian nvim'
+alias vk='NVIM_APPNAME=nvim-kickstart nvim'
+alias vl='NVIM_APPNAME=nvim-lazy nvim'
