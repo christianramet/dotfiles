@@ -9,6 +9,7 @@ alias magit="emacsclient -n -e \(magit-status\)"
 alias loc="git ls-files | xargs wc -l | sort"
 alias freebox-tv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u"
 alias youtube-mp3="yt-dlp --extract-audio --audio-format mp3 --embed-thumbnail --restrict-filenames --output '$INBOX/%(title)s.%(ext)s'"
+alias netstat-macos='sudo lsof -nP -iTCP -sTCP:LISTEN'
 
 alias reverse-tunnel-setup="ssh -R 10022:localhost:22 cr-bastion"
 alias reverse-tunnel-use="ssh -J cr-bastion localhost -p 10022"
@@ -37,3 +38,4 @@ alias v='nvim'
 alias vc='NVIM_APPNAME=nvim-christian nvim'
 alias vk='NVIM_APPNAME=nvim-kickstart nvim'
 alias vl='NVIM_APPNAME=nvim-lazy nvim'
+
